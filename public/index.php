@@ -4,6 +4,8 @@ require_once '../Car.php';
 require_once '../Bicycle.php';
 require_once '../Vehicle.php';
 require_once '../Truck.php';
+require_once '../Highway.php';
+require_once '../MotoWay.php';
 
 $car = new Car('green', 4, 'electric');
 $bicycle = new Bicycle('Pink', 1, 2);

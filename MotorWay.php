@@ -3,14 +3,19 @@
 require_once 'HighWay.php';
 
 final class MotorWay extends HighWay
+
 {
-    public function addVehicle(Vehicle $vehicle): array
+    protected int $nbLane;
+    protected int $maxSpeed;
+
+    public function addVehicle(Vehicle $vehicle)
     {
         $bike = new Bicycle('pink', 1, 2);
         if ($vehicle instanceof $bike) {
-            echo "interdit sur l'autoroute !!" . PHP_EOL;
-        }
+            return "interdit sur l'autoroute !!" . PHP_EOL;
+        } else { 
         $this->setCurrentVehicles($vehicle);
         return $this->currentVehicles;
     }
+}
 }
